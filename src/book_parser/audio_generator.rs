@@ -647,7 +647,7 @@ pub fn generate_audiobook(
         }
 
         let idx = index + 1;
-        let file_name = format!("{:04}-{}.{}", idx, safe_fs_name(&title, "_", 120), ext);
+        let file_name = format!("{}.{}", safe_fs_name(&title, "_", 120), ext);
         let out_path = audio_dir.join(file_name);
         let tmp_path = out_path.with_extension(format!("{}.partial", ext));
         if existing_audio_is_reusable(&out_path) {
